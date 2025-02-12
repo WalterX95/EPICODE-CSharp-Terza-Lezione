@@ -11,5 +11,26 @@ myConto1.VisualizzaContoCorrente();
 
 myCont2.ApriConto(myCont2.IdConto);
 
-
 myCont2.VisualizzaContoCorrente();
+
+string[] nomi = new string[4] { myConto1.NameConto, myCont2.NameConto, "Francesco", "Rosaria" };
+
+Console.WriteLine("Scrivi Persona da Trovare");
+Console.ForegroundColor = ConsoleColor.White;
+
+string? userName = Console.ReadLine();
+
+for(int i = 0; i < nomi.Length; i++)
+{
+    if (userName == null || userName == "" || userName != " ") {
+        Console.WriteLine("Nessun Nome Scritto !! ");
+    }
+
+    if (userName == nomi[i]) { Console.WriteLine("Nome trovato --> " + nomi[i]); }
+
+    if (userName != nomi[i]) { Console.WriteLine("Nessun Nome Trovato !"); }
+
+}
+
+
+
